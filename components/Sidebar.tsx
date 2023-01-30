@@ -15,9 +15,9 @@ function Sidebar() {
     };
 
     return (
-        <div className="absolute top-[4.75rem] right-0 bottom-0 left-0 flex flex-col justify-between bg-white px-4 pb-14 pt-5 lg:hidden">
+        <div className="absolute top-[4.75rem] right-0 bottom-0 left-0 flex flex-col justify-between bg-[#F3F3F3] px-4 pb-14 pt-5 lg:hidden">
             <div>
-                <div className="flex h-12 w-full items-center rounded-[10px] border-[1px] border-solid border-lightSilver pl-6">
+                <div className="flex h-12 w-full items-center rounded-[10px] border-[1px] border-solid border-lightSilver bg-white pl-6">
                     <MagnifyingGlassIcon className="h-6 w-6" />
                     <input
                         type="text"
@@ -28,14 +28,18 @@ function Sidebar() {
                 <ul>
                     <li className="borer-sidebar">NodeJS</li>
                     <li className="borer-sidebar">ReactJS</li>
-                    <li className="borer-sidebar flex justify-between">
+                    <li
+                        onClick={handleDropDown}
+                        className="borer-sidebar flex justify-between"
+                    >
                         <span> Khoá học </span>
-                        <ChevronDownIcon
-                            onClick={handleDropDown}
-                            className="h-6 w-6"
-                        />{' '}
+                        <ChevronDownIcon className="h-6 w-6" />{' '}
                     </li>
-                    {dropDown && <li className="borer-sidebar">ReactJS</li>}
+                    {dropDown && (
+                        <li className="bg-slate-200 text-base font-normal">
+                            ReactJS
+                        </li>
+                    )}
                     <li className="borer-sidebar">Công nghệ</li>
                     <li className="borer-sidebar">Tài nguyên</li>
                     <li className="borer-sidebar">Về tác giả</li>
