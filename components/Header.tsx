@@ -4,9 +4,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import {
     Bars3BottomRightIcon,
+    MagnifyingGlassIcon,
     MoonIcon,
     ShoppingCartIcon,
-    UsersIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Sidebar from './Sidebar';
@@ -20,10 +20,13 @@ function Header() {
 
     useEffect(() => {
         setShow(false);
+        // if(show === true){
+        //     document.getElementsByTagName("body")
+        // }
     }, []);
 
     return (
-        <div className="flex h-[79px] items-center justify-between px-3 lg:h-[100px] lg:px-[117px]">
+        <div className="bg-[#F3F3F3] flex h-20 items-center justify-between px-3 md:h-24 md:px-[3.875rem] lg:h-[6.25rem] lg:px-[7.3125rem]">
             <div className="lg:flex">
                 <Image
                     src="/images/logo1.png"
@@ -33,7 +36,7 @@ function Header() {
                     className="mr-5 w-auto"
                 />
 
-                <ul className="hidden lg:flex lg:w-[600px] lg:items-center lg:justify-between lg:text-base lg:font-bold lg:uppercase	">
+                <ul className="hidden lg:flex lg:w-[37.5rem] lg:items-center lg:justify-between lg:text-base lg:font-bold lg:uppercase">
                     <li>NodeJS</li>
                     <li>ReactJS</li>
                     <li>Khoá học</li>
@@ -44,12 +47,13 @@ function Header() {
             </div>
 
             <div className="flex items-center">
-                <ul className="hidden">
-                    <li>NodeJS</li>
+                <MagnifyingGlassIcon className="hidden h-6 w-6 lg:block" />
+                <MoonIcon className="ml-7 h-6 w-6 md:hidden lg:block" />
+                <ShoppingCartIcon className="ml-7 h-6 w-6 md:hidden lg:block" />
+                <ul className="hidden md:flex md:w-[10.25rem] md:justify-between md:text-base md:font-bold lg:hidden">
                     <li>ReactJS</li>
+                    <li>NodeJS</li>
                 </ul>
-                <MoonIcon className="h-6 w-6" />
-                <UsersIcon className="ml-7 h-7 w-7" />
                 {show ? (
                     <XMarkIcon
                         onClick={handleShow}
@@ -61,7 +65,6 @@ function Header() {
                         className="ml-7 h-6 w-6 lg:hidden"
                     />
                 )}
-                <ShoppingCartIcon className="ml-7 hidden h-6 w-6 lg:block" />
             </div>
             {show ? <Sidebar /> : null}
         </div>

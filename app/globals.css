@@ -12,4 +12,7 @@
     .borer-sidebar {
         @apply border-b-[1px] border-solid border-lightSilver py-6 text-xl font-medium	
     }
+    .scrollbar{
+        
+    }
 }

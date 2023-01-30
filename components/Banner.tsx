@@ -9,7 +9,7 @@ function Banner() {
                 alt="Banner"
                 height={100}
                 width={100}
-                className="h-96 w-full"
+                className="h-96 w-auto"
             />
         </div>
     );

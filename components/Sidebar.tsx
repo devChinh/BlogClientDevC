@@ -1,12 +1,23 @@
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+'use client';
+
+import {
+    ChevronDownIcon,
+    MagnifyingGlassIcon,
+} from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 function Sidebar() {
+    const [dropDown, setDropDown] = useState(false);
+
+    const handleDropDown = () => {
+        setDropDown(!dropDown);
+    };
+
     return (
-        <div className="absolute top-[76px] right-0 bottom-0 left-0 flex flex-col justify-between  bg-chineseWhite px-4 pb-14 pt-5 lg:hidden">
+        <div className="absolute top-[4.75rem] right-0 bottom-0 left-0 flex flex-col justify-between bg-white px-4 pb-14 pt-5 lg:hidden">
             <div>
-                <div className="flex w-full rounded-[10px] border-[1px] border-solid border-lightSilver bg-white py-4 pl-6">
+                <div className="flex h-12 w-full items-center rounded-[10px] border-[1px] border-solid border-lightSilver pl-6">
                     <MagnifyingGlassIcon className="h-6 w-6" />
                     <input
                         type="text"
@@ -17,7 +28,14 @@ function Sidebar() {
                 <ul>
                     <li className="borer-sidebar">NodeJS</li>
                     <li className="borer-sidebar">ReactJS</li>
-                    <li className="borer-sidebar">Khoá học</li>
+                    <li className="borer-sidebar flex justify-between">
+                        <span> Khoá học </span>
+                        <ChevronDownIcon
+                            onClick={handleDropDown}
+                            className="h-6 w-6"
+                        />{' '}
+                    </li>
+                    {dropDown && <li className="borer-sidebar">ReactJS</li>}
                     <li className="borer-sidebar">Công nghệ</li>
                     <li className="borer-sidebar">Tài nguyên</li>
                     <li className="borer-sidebar">Về tác giả</li>
@@ -27,7 +45,7 @@ function Sidebar() {
                 <p className="text-center	text-base font-normal">
                     Theo dõi mình{' '}
                 </p>
-                <ul className="mx-auto mt-4 flex w-[170px] justify-between">
+                <ul className="mx-auto mt-4 flex w-[10.625rem] justify-between">
                     <li>
                         <a href="">
                             {' '}
