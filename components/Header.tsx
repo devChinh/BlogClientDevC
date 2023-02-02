@@ -26,7 +26,7 @@ function Header() {
     }, []);
 
     return (
-        <div className="bg-[#F3F3F3] flex h-20 items-center justify-between px-3 md:h-24 md:px-[3.875rem] lg:h-[6.25rem] lg:px-[7.3125rem]">
+        <div className="flex h-20 items-center justify-between bg-[#F3F3F3] px-4 md:h-24 md:px-[4.0625rem] lg:h-[6.25rem]  lg:px-[7.5rem]">
             <div className="lg:flex">
                 <Image
                     src="/images/logo1.png"

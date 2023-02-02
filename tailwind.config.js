@@ -11,10 +11,9 @@ module.exports = {
             segoe: ['Segoe Script'],
         },
         extend: {
-            flex : {
-                
-            },
+            flex: {},
             colors: {
+                white: '#fff',
                 antiFlashWhite: '#f2f2f2',
                 aquamarine: '#66ffcc',
                 pastelRed: '#ff6666',
