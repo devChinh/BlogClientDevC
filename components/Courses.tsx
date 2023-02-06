@@ -42,7 +42,7 @@ function Courses() {
     return (
         <div className="flex h-[60rem] flex-col justify-between py-[3.8125rem] lg:h-[1001px] lg:py-[6.0625rem]">
             <div>
-                <h1 className="mx-auto mb-4 w-[18.4375rem] text-center text-2xl font-medium lg:text-[2.125rem] lg:w-[38.8125rem]">
+                <h1 className="mx-auto mb-4 w-[18.4375rem] text-center text-2xl font-medium lg:w-[38.8125rem] lg:text-[2.125rem]">
                     Khai trương web mới, nhận ngay ưu đãi{' '}
                 </h1>
                 <p className="block text-center text-sm font-normal lg:text-base">
@@ -51,11 +51,11 @@ function Courses() {
                 </p>
             </div>
 
-            <div className="scrollbar-thumb-gray-900 scrollbar-track-gray-100 flex w-auto overflow-y-auto pr-4 pb-4 scrollbar lg:mx-auto">
+            <div className="scrollbar-thumb-gray-900 scrollbar-track-gray-100 flex w-auto overflow-y-auto pr-4 pb-4 scrollbar lg:mx-auto lg:w-full lg:px-[7.5rem]">
                 {courses.map((course) => (
                     <div
                         key={course.id}
-                        className="h-[33.8125rem] w-[20.875rem] rounded-xl shadow-[0px_2px_10px_-1px_rgba(0,0,0,0.48)] ml-4"
+                        className="ml-4 h-[33.8125rem] w-[20.875rem] rounded-xl shadow-[0px_2px_10px_-1px_rgba(0,0,0,0.48)] lg:w-[22%]"
                     >
                         <Image
                             src={course.img}

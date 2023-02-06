@@ -3,16 +3,40 @@
 @tailwind utilities;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans";
 }
 
 @layer components {
-    .borer-sidebar {
-        @apply border-b-[1px] border-solid border-lightSilver py-6 text-xl font-medium	
-    }
-    .scrollbar{
-        
-    }
+  .borer-sidebar {
+    @apply border-b-[1px] border-solid border-lightSilver py-6 text-xl font-medium
+  }
+
+  .htmlHidden {
+    @apply overflow-hidden
+  }
+}
+
+@layer base {
+  h5 {
+    @apply font-thin
+  }
+
+  h6 {
+    @apply h-10
+  }
+}
+
+@layer components {
+  .transition {
+    background-color: theme('colors.white')
+  }
+}
+
+@layer utilities {
+  .transitionDown {
+    transition: all 0.5s;
+  }
 }

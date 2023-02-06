@@ -7,8 +7,7 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            sans: ['Noto Sans JP', 'sans-serif'],
-            segoe: ['Segoe Script'],
+            plus : ['Plus Jakarta Sans']
         },
         extend: {
             flex: {},

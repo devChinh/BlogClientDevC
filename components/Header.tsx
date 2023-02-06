@@ -16,13 +16,12 @@ function Header() {
 
     const handleShow: () => void = () => {
         setShow(!show);
+        const html = document.getElementsByTagName('html')[0];
+        html.classList.toggle('htmlHidden');
     };
 
     useEffect(() => {
         setShow(false);
-        // if(show === true){
-        //     document.getElementsByTagName("body")
-        // }
     }, []);
 
     return (
